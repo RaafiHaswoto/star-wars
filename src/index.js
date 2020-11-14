@@ -15,7 +15,7 @@ import ReactDOM from 'react-dom';
 import './assets/styles/main.scss';
 
 // App
-import App from './container/App';
+import App from './container/app';
 
 // Report
 import reportWebVitals from './report/reportWebVitals';

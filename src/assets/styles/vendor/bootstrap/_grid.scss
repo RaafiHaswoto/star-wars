@@ -14,7 +14,8 @@
   max-width: $container-lg;
   @media (max-width: $screen-lg) {
     max-width: unset;
-    padding: 0 6rem;
+    // padding: 0 6rem;
+    padding: 0;
   }
 
   @media (max-width: $screen-sm) {
