@@ -1,0 +1,803 @@
+/* ==========================================================================
+   MIXIN
+   ========================================================================== */
+
+@mixin large {
+  @media only screen and (max-width: screen(large)) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (max-width: screen(medium)) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (max-width: screen(small)) {
+    @content;
+  }
+}
+
+@mixin iphone5 {
+  @media only screen and (max-width: screen(iphone5)) {
+    @content;
+  }
+}
+
+@mixin mq($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+// Safari Browser
+@mixin safariBrowser {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) and (not (stroke-color: transparent)) {
+      @content;
+    }
+  }
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+      @content;
+    }
+  }
+}
+
+// Firefox Browser
+@mixin firefoxBrowser {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+// Ms Edge Browser
+@mixin msEdgeBrowser {
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}
+// IEBrowser
+@mixin IEBrowser {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin colors-all-font {
+  color: color(black);
+  &.primary100 {
+    color: color(primary, 100);
+  }
+  &.grey125 {
+    color: color(grey, 125);
+  }
+  &.grey100 {
+    color: color(grey, 100);
+  }
+  &.grey50 {
+    color: color(grey, 50);
+  }
+  &.error {
+    color: color(system, error);
+  }
+  &.warning {
+    color: color(system, warning);
+  }
+  &.successful {
+    color: color(system, successful);
+  }
+  &.white {
+    color: color(white);
+  }
+}
+
+@mixin colors-all-font-hover {
+  color: color(black);
+  transition: color 0.25s ease;
+  &:hover {
+    color: darken(color(black), 10%);
+  }
+  &:active {
+    color: darken(color(black), 20%);
+  }
+  &.primary100 {
+    color: color(primary, 100);
+    &:hover {
+      color: darken(color(primary, 100), 10%);
+    }
+    &:active {
+      color: darken(color(primary, 100), 20%);
+    }
+  }
+  &.grey125 {
+    color: color(grey, 125);
+    &:hover {
+      color: darken(color(grey, 125), 10%);
+    }
+    &:active {
+      color: darken(color(grey, 125), 20%);
+    }
+  }
+  &.grey100 {
+    color: color(grey, 100);
+    &:hover {
+      color: darken(color(grey, 100), 10%);
+    }
+    &:active {
+      color: darken(color(grey, 100), 20%);
+    }
+  }
+  &.grey50 {
+    color: color(grey, 50);
+    &:hover {
+      color: darken(color(grey, 50), 10%);
+    }
+    &:active {
+      color: darken(color(grey, 50), 20%);
+    }
+  }
+  &.grass50 {
+    color: color(grass, 50);
+    &:hover {
+      color: darken(color(grass, 50), 10%);
+    }
+    &:active {
+      color: darken(color(grass, 50), 20%);
+    }
+  }
+  &.error {
+    color: color(system, error);
+    &:hover {
+      color: darken(color(system, error), 10%);
+    }
+    &:active {
+      color: darken(color(system, error), 20%);
+    }
+  }
+  &.warning {
+    color: color(system, warning);
+    &:hover {
+      color: darken(color(system, warning), 10%);
+    }
+    &:active {
+      color: darken(color(system, warning), 20%);
+    }
+  }
+  &.successful {
+    color: color(system, successful);
+    &:hover {
+      color: darken(color(system, successful), 10%);
+    }
+    &:active {
+      color: darken(color(system, successful), 20%);
+    }
+  }
+  &.white {
+    color: color(white);
+    &:hover {
+      color: color(grey, 50);
+    }
+    &:active {
+      color: color(grey, 75);
+    }
+  }
+}
+
+@mixin colors-all-system {
+  color: color(black);
+  &.error {
+    color: color(system, error);
+  }
+  &.warning {
+    color: color(system, warning);
+  }
+  &.successful {
+    color: color(system, successful);
+  }
+}
+
+@mixin colors-all-label {
+  color: color(black);
+  &.white {
+    color: color(white);
+    a {
+      color: color(white);
+      &:hover {
+        color: darken(color(white), 10%);
+      }
+      &:active {
+        color: darken(color(white), 20%);
+      }
+    }
+  }
+  &.blue100 {
+    color: color(blue, 100);
+    a {
+      color: color(blue, 100);
+      &:hover {
+        color: darken(color(blue, 100), 10%);
+      }
+      &:active {
+        color: darken(color(blue, 100), 20%);
+      }
+    }
+  }
+  &.purple100 {
+    color: color(purple, 100);
+    a {
+      color: color(purple, 100);
+      &:hover {
+        color: darken(color(purple, 100), 10%);
+      }
+      &:active {
+        color: darken(color(purple, 100), 20%);
+      }
+    }
+  }
+  &.orange100 {
+    color: color(orange, 100);
+    a {
+      color: color(orange, 100);
+      &:hover {
+        color: darken(color(orange, 100), 10%);
+      }
+      &:active {
+        color: darken(color(orange, 100), 20%);
+      }
+    }
+  }  
+  &.navy100 {
+    color: color(navy, 100);
+    a {
+      color: color(navy, 100);
+      &:hover {
+        color: darken(color(navy, 100), 10%);
+      }
+      &:active {
+        color: darken(color(navy, 100), 20%);
+      }
+    }
+  }
+  &.grey100 {
+    color: color(grey, 100);
+    a {
+      color: color(grey, 100);
+      &:hover {
+        color: darken(color(grey, 100), 10%);
+      }
+      &:active {
+        color: darken(color(grey, 100), 20%);
+      }
+    }
+  }
+}
+
+@mixin system-background-color {
+  background-color: color(primary, 100);
+  &.error {
+    background-color: color(system, error);
+  }
+  &.warning {
+    background-color: color(system, warning);
+  }
+  &.successful {
+    background-color: color(system, successful);
+  }
+  &.primary-100 {
+    background-color: color(primary, 100);
+  }
+}
+
+@mixin green-background-color {
+  &.primary120 {
+    background-color: color(primary, 120);
+  }
+  &.primary100 {
+    background-color: color(primary, 100);
+  }
+  &.primary75 {
+    background-color: color(primary, 75);
+  }
+  &.primary50 {
+    background-color: color(primary, 50);
+  }
+  &.grass100 {
+    background-color: color(grass, 100);
+  }
+  &.grass75 {
+    background-color: color(grass, 75);
+  }
+  &.grass50 {
+    background-color: color(grass, 50);
+  }
+  &.grass25 {
+    background-color: color(grass, 25);
+  }
+}
+
+@mixin border-colors-all {
+  border-color: color(black);
+  &.primary100 {
+    border-color: color(primary, 100);
+  }
+  &.primary90{
+    border-color: color(primary, 90);
+  }
+  &.grey125{
+    border-color: color(grey, 125);
+  }
+  &.grey100 {
+    border-color: color(grey, 100);
+  }
+  &.grey50 {
+    border-color: color(grey, 50);
+  }
+  &.error {
+    border-color: color(system, error);
+  }
+  &.warning {
+    border-color: color(system, warning);
+  }
+  &.successful {
+    border-color: color(system, successful);
+  }
+  &.white {
+    border-color: color(white);
+  }
+}
+
+@mixin hover-button($type) {
+  &:hover {
+    color: color(white);
+    .a-system-icon {
+      color: color(white);
+    }
+  }
+  @if $type == "default" {
+    &:hover {
+      background-color: color(grey, 75);
+      border-color: color(grey, 75);
+    }
+  } @else if $type == "primary" {
+    &:hover {
+      background-color: color(primary, 120);
+      border-color: color(primary, 120);
+    }
+  } @else if $type == "cyan" {
+    &:hover {
+      background-color: color(cyan, 120);
+      border-color: color(cyan, 120);
+    }
+  } @else if $type == "cyan-secondary" {
+    &:hover {
+      background-color: color(cyan, 50);
+      border-color: color(cyan, 50);
+    }
+  } @else if $type == "blue-sky" {
+    &:hover {
+      background-color: color(blue-sky, 120);
+      border-color: color(blue-sky, 120);
+    }
+  } @else if $type == "blue-sky-secondary" {
+    &:hover {
+      background-color: color(blue-sky, 50);
+      border-color: color(blue-sky, 50);
+    }
+  } @else if $type == "blue" {
+    &:hover {
+      background-color: color(blue, 120);
+      border-color: color(blue, 120);
+    }
+  } @else if $type == "blue-secondary" {
+    &:hover {
+      background-color: color(blue, 50);
+      border-color: color(blue, 50);
+    }
+  } @else if $type == "orange" {
+    &:hover {
+      background-color: color(orange, 120);
+      border-color: color(orange, 120);
+    }
+  } @else if $type == "orange-secondary" {
+    &:hover {
+      background-color: color(orange, 50);
+      border-color: color(orange, 50);
+    }
+  } @else if $type == "dark-yellow" {
+    &:hover {
+      background-color: color(dark-yellow, 120);
+      border-color: color(dark-yellow, 120);
+    }
+  } @else if $type == "dark-yellow-secondary" {
+    &:hover {
+      background-color: color(dark-yellow, 50);
+      border-color: color(dark-yellow, 50);
+    }
+  } @else if $type == "brown" {
+    &:hover {
+      background-color: color(brown, 120);
+      border-color: color(brown, 120);
+    }
+  } @else if $type == "brown-secondary" {
+    &:hover {
+      background-color: color(brown, 50);
+      border-color: color(brown, 50);
+    }
+  } @else if $type == "navy" {
+    &:hover {
+      background-color: color(navy, 120);
+      border-color: color(navy, 120);
+    }
+  } @else if $type == "navy-secondary" {
+    &:hover {
+      background-color: color(navy, 50);
+      border-color: color(navy, 50);
+    }
+  } @else if $type == "white-secondary" {
+    &:hover {
+      // opacity: 0.2;
+      // color: color(white);
+      border-color: rgba(#fff, 0);
+      background-color: rgba(#fff, 0.2);
+    }
+  } @else {
+    &:hover {
+      color: color(white);
+      background-color: color(primary, 50);
+      border-color: color(primary, 50);
+    }
+  }
+}
+
+@mixin active-visited-target-blank-button {
+  &:active{
+    @content;
+  }
+  .android-browser &,
+  .blackberry-browser &,
+  .ios-browser &,
+  .windows-phone-browser & {
+    &[target="_blank"]:hover {
+      @content;
+    }
+  }
+}
+
+@mixin active-visited-target-blank-action-button {
+  &:active,
+  &:visited {
+    @content;
+  }
+  .android-browser &,
+  .blackberry-browser &,
+  .ios-browser &,
+  .windows-phone-browser & {
+    &[target="_blank"]:hover {
+      @content;
+    }
+  }
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    -webkit-text-fill-color: $color;
+  }
+  &:-webkit-input-placeholder {
+    color: $color;
+    -webkit-text-fill-color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    -webkit-text-fill-color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+    -webkit-text-fill-color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+    -webkit-text-fill-color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    -webkit-text-fill-color: $color;
+  }
+  &:placeholder-shown {
+    color: $color;
+    -webkit-text-fill-color: $color;
+  }
+}
+
+@mixin font-weight-child {
+  .light {
+    font-weight: fw(light);
+  }
+  .reguler {
+    font-weight: fw(reguler);
+  }
+  strong,
+  .bold {
+    font-weight: fw(bold);
+  }
+  .black {
+    font-weight: fw(black);
+  }
+}
+
+@mixin font-weight-default-light {
+  font-weight: fw(light);
+  &.reguler {
+    font-weight: fw(reguler);
+  }
+  &.bold {
+    font-weight: fw(bold);
+  }
+  &.black {
+    font-weight: fw(black);
+  }
+  @include font-weight-child;
+}
+
+@mixin font-weight-default-reguler {
+  font-weight: fw(reguler);
+  &.light {
+    font-weight: fw(light);
+  }
+  &.bold {
+    font-weight: fw(bold);
+  }
+  &.black {
+    font-weight: fw(black);
+  }
+  @include font-weight-child;
+}
+
+@mixin font-weight-heading {
+  font-weight: fw(bold);
+  &.light {
+    font-weight: fw(light);
+  }
+  &.reguler {
+    font-weight: fw(reguler);
+  }
+  &.black {
+    font-weight: fw(black);
+  }
+  @include font-weight-child;
+}
+
+@mixin remove-tap-highlight {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+}
+
+// scroll-x-auto
+@mixin scroll-x-auto {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+    width: 0;
+  }
+}
+
+// scroll-x-touch
+@mixin scroll-x-touch {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+    width: 0;
+  }
+}
+
+// scroll-y
+@mixin scroll-y-auto {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+    width: 0;
+  }
+}
+
+@mixin scroll-y-touch {
+  overflow-x: hidden;
+  overflow-y: auto;
+  // -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+    width: 0;
+  }
+}
+
+// scroll-hide-x
+@mixin scroll-hide-x {
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  // -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+    width: 0;
+  }
+}
+
+// scroll-hide-y
+@mixin scroll-hide-y {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  // -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+    width: 0;
+  }
+}
+
+@mixin gradient-all-color {
+  .lg-blue {
+    background-image: lg(blue);
+  }
+  .lg-brown {
+    background-image: lg(brown);
+  }
+  .lg-cyan {
+    background-image: lg(cyan);
+  }
+  .lg-light-blue {
+    background-image: lg(light-blue);
+  }
+  .lg-orange {
+    background-image: lg(orange);
+  }
+  .lg-green {
+    background-image: lg(green);
+  }
+  .lg-sun {
+    background-image: lg(sun);
+  }
+}
+
+// ellipsis
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// multiline-ellipsis
+@mixin multiline-ellipsis($row) {
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+@mixin landing-dashboard-layout {
+  .container .row {
+    padding-right: 6.4rem;
+    @include mq(1280px) {
+      padding-right: 5.6rem;
+    }
+    @include mq(1200px) {
+      padding-right: 2.4rem;
+    }
+    @include small {
+      padding-right: 0;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------------
+// Text Crop
+// ---------------------------------------------------------------------------------
+@mixin text-crop(
+  $line-height: 1.3,
+  $top-adjustment: 0px,
+  $bottom-adjustment: 0px
+) {
+  // Configured in Step 1
+  $top-crop: 15;
+  $bottom-crop: 13;
+  $crop-font-size: 31;
+  $crop-line-height: 1.6;
+
+  // Apply values to calculate em-based margins that work with any font size
+  $dynamic-top-crop: max(
+      ($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)),
+      0
+    ) / $crop-font-size;
+  $dynamic-bottom-crop: max(
+      (
+        $bottom-crop + ($line-height - $crop-line-height) *
+          ($crop-font-size / 2)
+      ),
+      0
+    ) / $crop-font-size;
+
+  // Mixin output
+  line-height: $line-height;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+  }
+
+  &::before {
+    margin-bottom: calc(-#{$dynamic-top-crop}em + #{$top-adjustment});
+  }
+
+  &::after {
+    margin-top: calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment});
+  }
+}
+// Mixin generated at: http://text-crop.eightshapes.com/?typeface-selection=google-font&typeface=Lato&custom-typeface-name=Helvetica&custom-typeface-url=&custom-typeface-weight=400&custom-typeface-style=normal&weight-and-style=regular&size=31&line-height=1.6&top-crop=15&bottom-crop=13
+
+/* Usage Examples
+      .my-level-1-heading-class {
+          @include text-crop; // Will use default line height of 1.3
+          font-size: 48px;
+          margin: 0 0 0 16px;
+      }
+
+      .my-level-2-heading-class {
+          @include text-crop; // Will use default line height of 1.3
+          font-size: 32px; // Don't need to change any settings, will work with any font size automatically
+          margin: 0 0 0 16px;
+      }
+
+      .my-body-copy-class {
+          @include text-crop($line-height: 2); // Larger line height desired, set the line height via the mixin
+          font-size: 16px;
+      }
+
+      // Sometimes depending on the font-size, the rendering, the browser, etc. you may need to tweak the output.
+      // You can adjust the top and bottom cropping when invoking the component using the $top-adjustment and $bottom-adjustment settings
+
+      .slight-adjustment-needed {
+          @include text-crop($top-adjustment: -0.5px, $bottom-adjustment: 2px);
+          font-size: 17px;
+      }
+
+      .dont-do-this {
+          @include text-crop;
+          font-size: 16px;
+          line-height: 3; // DO NOT set line height outside of the mixin, the mixin needs the line height value to calculate the crop correctly
+      }
+  */
