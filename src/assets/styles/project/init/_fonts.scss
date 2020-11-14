@@ -1,108 +1,107 @@
 /* ==========================================================================
-   FONTS
+   FONT
    ========================================================================== */
 
 @font-face {
-    font-family: 'Dosis';
-    src: url('../fonts/Dosis-SemiBold.eot');
-    src: url('../fonts/Dosis-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Dosis-SemiBold.woff2') format('woff2'),
-        url('../fonts/Dosis-SemiBold.woff') format('woff'),
-        url('../fonts/Dosis-SemiBold.ttf') format('truetype'),
-        url('../fonts/Dosis-SemiBold.svg#Dosis-SemiBold') format('svg');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Dosis';
+  src: url('../../../font/Dosis-SemiBold.eot');
+  src: url('../../../font/Dosis-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../../../font/Dosis-SemiBold.woff2') format('woff2'),
+      url('../../../font/Dosis-SemiBold.woff') format('woff'),
+      url('../../../font/Dosis-SemiBold.ttf') format('truetype'),
+      url('../../../font/Dosis-SemiBold.svg#Dosis-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Dosis';
-    src: url('../fonts/Dosis-Bold.eot');
-    src: url('../fonts/Dosis-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Dosis-Bold.woff2') format('woff2'),
-        url('../fonts/Dosis-Bold.woff') format('woff'),
-        url('../fonts/Dosis-Bold.ttf') format('truetype'),
-        url('../fonts/Dosis-Bold.svg#Dosis-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Dosis';
+  src: url('../../../font/Dosis-Bold.eot');
+  src: url('../../../font/Dosis-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../../../font/Dosis-Bold.woff2') format('woff2'),
+      url('../../../font/Dosis-Bold.woff') format('woff'),
+      url('../../../font/Dosis-Bold.ttf') format('truetype'),
+      url('../../../font/Dosis-Bold.svg#Dosis-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Dosis';
-    src: url('../fonts/Dosis-ExtraBold.eot');
-    src: url('../fonts/Dosis-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Dosis-ExtraBold.woff2') format('woff2'),
-        url('../fonts/Dosis-ExtraBold.woff') format('woff'),
-        url('../fonts/Dosis-ExtraBold.ttf') format('truetype'),
-        url('../fonts/Dosis-ExtraBold.svg#Dosis-ExtraBold') format('svg');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Dosis';
+  src: url('../../../font/Dosis-ExtraBold.eot');
+  src: url('../../../font/Dosis-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../../../font/Dosis-ExtraBold.woff2') format('woff2'),
+      url('../../../font/Dosis-ExtraBold.woff') format('woff'),
+      url('../../../font/Dosis-ExtraBold.ttf') format('truetype'),
+      url('../../../font/Dosis-ExtraBold.svg#Dosis-ExtraBold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Dosis';
-    src: url('../fonts/Dosis-ExtraLight.eot');
-    src: url('../fonts/Dosis-ExtraLight.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Dosis-ExtraLight.woff2') format('woff2'),
-        url('../fonts/Dosis-ExtraLight.woff') format('woff'),
-        url('../fonts/Dosis-ExtraLight.ttf') format('truetype'),
-        url('../fonts/Dosis-ExtraLight.svg#Dosis-ExtraLight') format('svg');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Dosis';
+  src: url('../../../font/Dosis-ExtraLight.eot');
+  src: url('../../../font/Dosis-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('../../../font/Dosis-ExtraLight.woff2') format('woff2'),
+      url('../../../font/Dosis-ExtraLight.woff') format('woff'),
+      url('../../../font/Dosis-ExtraLight.ttf') format('truetype'),
+      url('../../../font/Dosis-ExtraLight.svg#Dosis-ExtraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Dosis';
-    src: url('../fonts/Dosis-Medium.eot');
-    src: url('../fonts/Dosis-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Dosis-Medium.woff2') format('woff2'),
-        url('../fonts/Dosis-Medium.woff') format('woff'),
-        url('../fonts/Dosis-Medium.ttf') format('truetype'),
-        url('../fonts/Dosis-Medium.svg#Dosis-Medium') format('svg');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Dosis';
+  src: url('../../../font/Dosis-Medium.eot');
+  src: url('../../../font/Dosis-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../../../font/Dosis-Medium.woff2') format('woff2'),
+      url('../../../font/Dosis-Medium.woff') format('woff'),
+      url('../../../font/Dosis-Medium.ttf') format('truetype'),
+      url('../../../font/Dosis-Medium.svg#Dosis-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Dosis';
-    src: url('../fonts/Dosis-Light.eot');
-    src: url('../fonts/Dosis-Light.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Dosis-Light.woff2') format('woff2'),
-        url('../fonts/Dosis-Light.woff') format('woff'),
-        url('../fonts/Dosis-Light.ttf') format('truetype'),
-        url('../fonts/Dosis-Light.svg#Dosis-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Dosis';
+  src: url('../../../font/Dosis-Light.eot');
+  src: url('../../../font/Dosis-Light.eot?#iefix') format('embedded-opentype'),
+      url('../../../font/Dosis-Light.woff2') format('woff2'),
+      url('../../../font/Dosis-Light.woff') format('woff'),
+      url('../../../font/Dosis-Light.ttf') format('truetype'),
+      url('../../../font/Dosis-Light.svg#Dosis-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Dosis';
-    src: url('../fonts/Dosis-Regular.eot');
-    src: url('../fonts/Dosis-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Dosis-Regular.woff2') format('woff2'),
-        url('../fonts/Dosis-Regular.woff') format('woff'),
-        url('../fonts/Dosis-Regular.ttf') format('truetype'),
-        url('../fonts/Dosis-Regular.svg#Dosis-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Dosis';
+  src: url('../../../font/Dosis-Regular.eot');
+  src: url('../../../font/Dosis-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../../../font/Dosis-Regular.woff2') format('woff2'),
+      url('../../../font/Dosis-Regular.woff') format('woff'),
+      url('../../../font/Dosis-Regular.ttf') format('truetype'),
+      url('../../../font/Dosis-Regular.svg#Dosis-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Dosis';
-    src: url('../fonts/Dosis-ExtraLight_1.eot');
-    src: url('../fonts/Dosis-ExtraLight_1.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Dosis-ExtraLight_1.woff2') format('woff2'),
-        url('../fonts/Dosis-ExtraLight_1.woff') format('woff'),
-        url('../fonts/Dosis-ExtraLight_1.ttf') format('truetype'),
-        url('../fonts/Dosis-ExtraLight_1.svg#Dosis-ExtraLight') format('svg');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Dosis';
+  src: url('../../../font/Dosis-ExtraLight_1.eot');
+  src: url('../../../font/Dosis-ExtraLight_1.eot?#iefix') format('embedded-opentype'),
+      url('../../../font/Dosis-ExtraLight_1.woff2') format('woff2'),
+      url('../../../font/Dosis-ExtraLight_1.woff') format('woff'),
+      url('../../../font/Dosis-ExtraLight_1.ttf') format('truetype'),
+      url('../../../font/Dosis-ExtraLight_1.svg#Dosis-ExtraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
-
