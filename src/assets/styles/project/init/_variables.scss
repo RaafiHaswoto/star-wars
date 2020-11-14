@@ -1,0 +1,297 @@
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+
+/* ----------------------
+  - COLORS
+  ---------------------- */
+$colors: (
+  // primary colors
+  primary:(
+    150: #00483d,
+  ),
+  // secondary colors
+  cyan: (
+    150: #035f64,
+  ),
+  orange: (
+    150: #9b3a00,
+  ),
+  blue: (
+    150: #003257,
+  ),
+  navy:(
+    150: #162843,
+  ),
+  grass: (
+    150: #02593c,
+  ),
+  brown: (
+    150: #7c4a05,
+  ),
+  dark-yellow: (
+    150: #785d13,
+  ),
+  blue-sky: (
+    150: #276b84,
+  ),
+  // background
+  british-green: (
+    100: #001c11,
+
+  ),
+  maroon: (
+    100: #21080f,
+
+  ),
+    priority-black: (
+    100: #0c0c0c,
+
+  ),
+  // shades
+  black: #121f26,
+  white: #fff,
+  grey: (
+    150: #23343f,
+  ),
+  // system feedback
+  system: (
+    error: #d70c25,
+    warning: #e7ab20,
+    successful: #009950
+  ),
+  // illustration and content icons
+  fuschia: (
+    100: #c71c41,
+  ),
+  midnight: (
+    150: #2f335d,
+    100: #2d327a,
+  ),
+  turquoise: (
+    100: #35af89,
+  ),  sun: (
+    100: #d09900,
+
+    25: #ffd721
+  ),  green: (
+    100: #78b316,
+  ),
+  purple: (
+    100: #69267e,
+  ),
+  violet:(
+    100: #b2105a,
+  ),
+  // overlay
+  overlay: (
+    80: rgba(#000, .8),
+    50: rgba(#000, .5),    
+    20: rgba(#000, .2)
+  ),
+);
+
+$gradient: (
+  blue: (
+    0: #234b80,
+    100: #2e6cad
+  ),
+  brown: (
+    0: #754503,
+    100: #956118
+  ),
+  cyan: (
+    0: #00757c,
+    100: #00a4ad
+  ),
+  light-blue: (
+    0: #00729e,
+    100: #11b0ec
+  ),
+  orange: (
+    0: #e65500,
+    100: #ed8040
+  ),
+  green:(
+    0: #015b4d,
+    100: #006757
+  ),
+  green-grass: (
+    0: #008873,
+    100: #00b175
+  ),
+  sun: (
+    0: #d09900,
+    100: #fcb800
+  )
+);
+
+/* ----------------------
+  - FONT
+  ---------------------- */
+// Font Family
+$ff-main: "Lato", sans-serif;
+
+// Font Size
+$fz: (
+  greetings: 8.4rem,
+  mgreetings: 4.2rem,
+  conversational-single: 4rem,
+  // mconversational-single: 2.4rem,
+  mconversational-single: 2.6rem,
+  conversational-multiple: 3rem,
+  mconversational-multiple: 1.8rem,
+  form-default: 3.2rem,
+  mform-default: 2rem,
+  form-small: 2.4rem,
+  mform-small: 1.6rem,
+  h1: 6.4rem,
+  mh1: 4rem,
+  h2: 4rem,
+  mh2: 2.6rem,
+  h3: 3rem,
+  mh3: 1.8rem,
+  h4: 2.4rem,
+  mh4: 1.6rem,
+  body: 2rem,
+  mbody: 1.6rem,
+  info: 1.6rem,
+  minfo: 1.4rem,
+  action: 1.2rem,
+  maction: 1.2rem,
+  label: 1.2rem,
+  mlabel: 1rem,
+  error-message: 1.2rem,
+  top-nav: 1.2rem,
+  mtop-nav: 1.2rem,
+  side-toolbar: 2rem,
+  links-body: 2rem,
+  mlinks-body: 1.6rem,
+  links-info: 1.6rem,
+  mlinks-info: 1.4rem,
+  button-default: 1.6rem,
+  mbutton-default: 1.4rem,
+  button-cozy: 2rem,
+  mbutton-cozy: 1.6rem,
+  button-compact: 1.2rem,
+  avatar32: 1.2rem,
+  avatarIcon32: 1.6rem,
+  avatar48: 1.8rem,
+  avatarIcon48: 2.4rem,
+  avatar64: 2rem,
+  avatarIcon64: 3.2rem,
+  avatar80: 2.4rem,
+  avatarIcon80: 4rem
+);
+
+// Line Height
+$lh: (
+  greetings: 1.05,
+  mgreetings: 1.14,
+  conversational-single: 1.4,
+  // mconversational-single: 1.25,
+  mconversational-single: 1.54,
+  conversational-multiple: 1.33,
+  mconversational-multiple: 1.67,
+  form-default: 1.25,
+  // mform-default: 1.2,
+  mform-default: 1.54,
+  form-small: 1.33,
+  mform-small: 1.5,
+  h1: 1.2,
+  mh1: 1.2,
+  h2: 1.4,
+  mh2: 1.33,
+  h3: 1.6,
+  mh3: 1.78,
+  h4: 1.33,
+  mh4: 1.5,
+  body: 1.6,
+  mbody: 1.5,
+  info: 1.5,
+  minfo: 1.71,
+  action: 2,
+  maction: 2,
+  label: 1.33,
+  mlabel: 1.6,
+  error-message: 1.5,
+  top-nav: 2,
+  mtop-nav: 1.33,
+  side-toolbar: 1.6,
+  links-body: 1.6,
+  mlinks-body: 1.5,
+  links-info: 1.5,
+  mlinks-info: 1.71,
+  button-default: 1.5,
+  mbutton-default: 1.71,
+  button-cozy: 1.6,
+  mbutton-cozy: 1.5,
+  button-compact: 1.33
+);
+
+// Font Weight
+$fw: (
+  light: 300,
+  reguler: 400,
+  bold: 700,
+  black: 900
+);
+
+/* ----------------------
+  - RADIUS
+  ---------------------- */
+$radius: 2rem;
+
+/* ----------------------
+  - SCREEN
+  ---------------------- */
+$screen: (
+  large: 1440px,
+  medium: 1024px,
+  small: 896px,
+  phone: 480px,
+  iphone5: 320px
+);
+
+/* ----------------------
+  - SHADOW
+  ---------------------- */
+$shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+$shadow-bold: 0 2px 15px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+
+/* ----------------------
+  - SPACING
+  ---------------------- */
+$spacing-4: 0.4rem;
+$spacing-8: 0.8rem;
+$spacing-16: 1.6rem;
+$spacing-24: 2.4rem;
+$spacing-32: 3.2rem;
+$spacing-40: 4rem;
+$spacing-48: 4.8rem;
+$spacing-56: 5.6rem;
+$spacing-64: 6.4rem;
+$spacing-list: 0 4 8 16 24 32 40 48 56 64 72;
+
+/* ----------------------
+  - Z-INDEX
+  ---------------------- */
+$z-header: 9;
+$z-header-navigation-menu: 2;
+$z-header-navigation-section: 4;
+$z-header-bg-navigation: 3;
+$z-blank-screen: 13;
+$z-loader-page: 14;
+$z-card-header-slider: 11;
+$z-popup: 12;
+$z-button-overlay: 2;
+$z-toggle-dashboard: 10;
+$z-input-dropdown-bg: 4;
+$z-input-dropdown: 5;
+$z-login-container: 10;
+$z-login-bg-mobile: 10;
+$z-product-cards: 3;
+$z-product-cards-mobile: 10;
+$z-form-datepicker: 6;
+$z-keranjang-check: 1;
+$z-keranjang-checkout-total: 15;
